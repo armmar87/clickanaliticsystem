@@ -12,12 +12,12 @@
     <link href="{{asset('css/main.css')}}" rel="stylesheet" type="text/css">
 
 </head>
-<body>
+<body id="body">
 <div class="flex-center position-ref full-height">
     @if (Route::has('login'))
         <div class="top-right links">
             @auth
-                <a href="{{ url('/home') }}">Home</a>
+                <a href="{{ url('/dashboard') }}">Dashboard</a>
             @else
                 <a href="{{ route('login') }}">Login</a>
                 <a href="{{ route('register') }}">Register</a>
@@ -40,5 +40,8 @@
         </div>
     </div>
 </div>
+
+{{--<script src="{{ asset('js/app.js') }}"></script>--}}
+<script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
