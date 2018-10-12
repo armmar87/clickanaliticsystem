@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClickAnalyticSysytemsTable extends Migration
+class CreateSitesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateClickAnalyticSysytemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('click_analytic_sysytems', function (Blueprint $table) {
+        Schema::create('sites', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('site_page');
+//            $table->timestamps();
         });
     }
 
@@ -26,6 +27,6 @@ class CreateClickAnalyticSysytemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('click_analytic_sysytems');
+        Schema::dropIfExists('sites');
     }
 }

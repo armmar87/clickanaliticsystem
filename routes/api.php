@@ -12,9 +12,12 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::group(['domain' => env('API_HOST')], function () {
 
-Route::group(['middleware' => 'api_key'], function () {
-    Route::post('/click-analytic-system', 'ClickAnalyticSysytemsController@setClickAnalytic');
+    Route::group(['middleware' => 'api_key'], function () {
+        Route::post('/click-analytic-system', 'ClickSiteAnalyticController@setClickSites');
+    });
+
 });
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
