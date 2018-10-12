@@ -117,7 +117,7 @@ return [
         [
             'text'        => 'Dashboard',
             'url'         => 'dashboard',
-//            'icon'        => 'lock',
+            'icon'        => 'dashboard',
 //            'label'       => 4,
 //            'label_color' => 'success',
         ],
