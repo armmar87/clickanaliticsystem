@@ -16,6 +16,10 @@ class Site extends Model
 
     protected $table = 'sites';
 
+    public function clickAnalytics() {
+        return $this->hasMany('App\ClickSiteAnalytic', 'sites_id', 'id');
+    }
+
     public static function setClickSites($request)
     {
         DB::beginTransaction();

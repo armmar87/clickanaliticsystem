@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreClickAnalyticSites extends FormRequest
+class StoreUpdateChart extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,7 @@ class StoreClickAnalyticSites extends FormRequest
     public function rules()
     {
         return [
-            'site_page' => 'required|string',
-            'coordinate_X' => 'required|integer',
-            'coordinate_Y' => 'required|integer',
+            'siteId' => 'required|integer'
         ];
     }
 }

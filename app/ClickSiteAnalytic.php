@@ -21,6 +21,5 @@ class ClickSiteAnalytic extends Model
         $siteClicks->coordinate_X = $request->coordinate_X;
         $siteClicks->coordinate_Y = $request->coordinate_Y;
         $siteClicks->save();
-//        return true;
     }
 }
